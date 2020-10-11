@@ -1,15 +1,17 @@
-import pathlib
+import os
 import setuptools
 from setuptools import setup
 
-HERE = pathlib.Path(__file__).parent
-README = (HERE / "README.md").read_text()
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name="liberation-direct",
     version="1.0.0",
     description="Parse Libération's live news page.",
-    long_description=README,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/massoncl/liberation-direct",
     author="Clément Masson",
