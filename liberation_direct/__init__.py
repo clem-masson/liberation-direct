@@ -38,9 +38,9 @@ class LiveElement:
     def title_text(self):
         """ Returns the element's title text. """
         if not self.title_html:
-            return None
+            return ""
 
-        return self.title_html[0].find("a").text
+        return self.title_html[0].find("a").text or ""
 
     @property
     def is_summary(self):
@@ -72,4 +72,4 @@ class LiberationDirect:
             if element.is_summary:
                 return element.to_markdown()
 
-        return None
+        return ""
