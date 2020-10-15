@@ -9,7 +9,7 @@ with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="liberation-direct",
-    version="1.0.1",
+    version="1.0.2",
     description="Parse Libération's live news page.",
     long_description=long_description,
     long_description_content_type="text/markdown",
